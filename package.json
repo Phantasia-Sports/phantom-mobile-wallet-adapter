@@ -1,5 +1,5 @@
 {
-  "name": "",
+  "name": "phantom-mobile-wallet-adapter",
   "version": "0.0.0",
   "description": "",
   "main": "build/src/index.js",
@@ -13,15 +13,35 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "gts lint",
     "clean": "gts clean",
-    "compile": "tsc",
-    "fix": "gts fix",
-    "prepare": "npm run compile",
-    "pretest": "npm run compile",
-    "posttest": "npm run lint"
+    "build": "tsc",
+    "fix": "gts fix"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "engines": {
+    "node": ">=16.0.0"
   },
   "devDependencies": {
+    "@types/bs58": "^4.0.1",
+    "@types/node": "^14.11.2",
     "gts": "^3.1.0",
-    "typescript": "^4.0.3",
-    "@types/node": "^14.11.2"
+    "typescript": "^4.0.3"
+  },
+  "dependencies": {
+    "@solana/web3.js": "^1.39.1",
+    "bs58": "^5.0.0",
+    "react": "^18.0.0",
+    "react-app": "^1.1.2",
+    "tweetnacl": "^1.0.3"
   }
 }
